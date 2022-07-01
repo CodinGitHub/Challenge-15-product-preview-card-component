@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+    --Very-dark-green: hsl(156, 42%, 18%);
+}   
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--Cream);
+    font-size: 14px;
+}
+.card{
+    margin: 68px auto;
+    width: 344px;
+    height: 612px;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    background-color: var(--White);
+}
+.card__first-section{
+    width: 100%;
+}
+.card__first-section__image{
+    width: 100%;
+}
+.card__second-section__product-type{
+    color: var(--Dark-grayish-blue);
+    width: 500;
+    font-size: 1em;
+    letter-spacing: 3px;
+    margin: 18px 24px 8px 24px;
+}
+.card__second-section__title{
+    font-family: 'Fraunces', serif;
+    font-size: 2.2em;
+    margin: 0 24px 16px 24px;
+    line-height: 34px;
+    color: var(--Very-dark-blue);
+}
+.card__second-section__description{
+    color: var(--Dark-grayish-blue);
+    font-size: 0.95em;
+    line-height: 22px;
+    margin: 0 24px 44px 24px;
+}
+.card__second-section__price{
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    margin: 0 24px 16px 24px;
+}
+.card__second-section__price__discount{
+    font-family: 'Fraunces', serif;
+    color: var(--Dark-cyan);
+    font-size: 2.3em;
+}
+.card__second-section__price__value{
+    text-decoration: line-through;
+    color: var(--Dark-grayish-blue);
+}
+.card__second-section__button{
+    width: 296px;
+    height: 50px;
+    background-color: var(--Dark-cyan);
+    border-radius: 8px;
+    border: none;
+    color: var(--White);
+    font-weight: 700;
+    font-size: 1.1em;
+    display: block;
+    margin: auto;
+}
+.card__second-section__button:hover{
+    cursor: pointer;
+    background-color: var(--Very-dark-green);
+}
+.card__second-section__button__icon{
+    margin-right: 12px;
+}
+.attribution { 
+    font-size: 14px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+/*--------------------Desktop View----------------------------------*/
+@media (min-width: 620px){
+    .card{
+        margin: 175px auto;
+        display: flex;
+        width: 600px;
+        height: 450px;
+    }
+    .card__first-section{
+        width: 300px;
+    }
+    .card__first-section__image{
+        content: url(./images/image-product-desktop.jpg);
+    }
+    .card__second-section{
+        width: 300px;
+    }
+    .card__second-section__product-type{
+        margin: 32px 24px 16px 24px;
+    }
+    .card__second-section__description{
+        line-height: 24px;
+        margin-bottom: 24px;
+    }
+    .card__second-section__price{
+        margin-bottom: 26px;
+    }
+    .card__second-section__button{
+        width: 240px;
+    }
+}
